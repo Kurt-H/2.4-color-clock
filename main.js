@@ -42,6 +42,8 @@ stopButton.addEventListener('click', stopClockInConsole);
 displayTime();*/
 
 /*Fifth objective:*/
+/* Does not display padded with zeros*/
+/*
 var hours = document.querySelector('.hours');
 var minutes = document.querySelector('.minutes');
 var seconds = document.querySelector('.seconds');
@@ -52,17 +54,17 @@ function displayTime() {
   document.querySelector(".hours").textContent = currentTime.getHours();
   document.querySelector(".minutes").textContent = currentTime.getMinutes();
   document.querySelector(".seconds").textContent = currentTime.getSeconds();
-  
+
   var incrementClock = window.setInterval(displayTime, 1000);
 }
-displayTime();
+displayTime();*/
 
+/*Fifth objective*/
 
 /*
 var hours = document.querySelector('.hours');
 var minutes = document.querySelector('.minutes');
 var seconds = document.querySelector('.seconds');
-
 
 function displayTime() {
   var currentTime = new Date();
@@ -75,11 +77,7 @@ function displayTime() {
 displayTime();*/
 
 
-
-
-
-
-/* displays clock counting to 99 (for all 3 values?), increment is 60 sec*/
+/* displays clock counting to 99 (for all 3 values?), increments to minutes every 60 seconds (60,20,80,40,00)*/
 
 /*var startButton = document.getElementById('start-button');
 var hours = document.querySelector('.hours');
@@ -88,10 +86,6 @@ var seconds = document.querySelector('.seconds');
 
 var startTime;
 var currentText;
-
-
-
-
 
 function millisecondsToInterval(ms){
   var numMsInHour = 60000 * 60;
@@ -121,14 +115,10 @@ function logCurrentTime(){
 
 }
 
-
 window.setInterval(logCurrentTime, 1000);*/
 
 
 }());
-
-
-
 
 
 /*

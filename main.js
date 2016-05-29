@@ -13,6 +13,7 @@ console.log(currentTime);
  *Fourth objective: Console.log the current time on page load. - Added stopButton to avoid having to close window to stop function running in console.
  */
 
+
 function updateTimeToConsole(){
   currentTime = new Date();
   console.log(currentTime);
@@ -27,23 +28,14 @@ function stopClockInConsole(){
 var stopButton = document.getElementById('stop-button');
 stopButton.addEventListener('click', stopClockInConsole);
 
+
+
+
+
 /*
- *Fifth objective: Display the current time every second. - Displays all seven values, not just time
+ *Fifth objective: Display the current time every second.
  */
 
-
-/*function displayTime() {
-  var currentTime = new Date();
-
-  document.getElementById("display-time").textContent = new Date();
-
-  var incrementClock = window.setInterval(displayTime, 1000);
-}
-displayTime();*/
-
-/*Fifth objective:*/
-/* Does not display padded with zeros*/
-/*
 var hours = document.querySelector('.hours');
 var minutes = document.querySelector('.minutes');
 var seconds = document.querySelector('.seconds');
@@ -51,71 +43,32 @@ var seconds = document.querySelector('.seconds');
 
 function displayTime() {
   var currentTime = new Date();
-  document.querySelector(".hours").textContent = currentTime.getHours();
-  document.querySelector(".minutes").textContent = currentTime.getMinutes();
-  document.querySelector(".seconds").textContent = currentTime.getSeconds();
+  hours.textContent = ("0" + currentTime.getHours()).slice(-2);
+  minutes.textContent = ("0" + currentTime.getMinutes()).slice(-2);
+  seconds.textContent = ("0" + currentTime.getSeconds()).slice(-2);
+
+  if (hours < 10){
+    hours = "0" + hours;
+  }
+
+  if (minutes < 10){
+    minutes = "0" + minutes;
+  }
+
+  if (seconds < 10){
+    seconds = "0" + seconds;
+  }
 
   var incrementClock = window.setInterval(displayTime, 1000);
 }
-displayTime();*/
-
-/*Fifth objective*/
-
-/*
-var hours = document.querySelector('.hours');
-var minutes = document.querySelector('.minutes');
-var seconds = document.querySelector('.seconds');
-
-function displayTime() {
-  var currentTime = new Date();
-  var currentTimeSeconds = currentTime.getSeconds();
-
-  document.querySelector(".seconds").textContent = currentTimeSeconds;
-
-  var incrementClock = window.setInterval(displayTime, 1000);
-}
-displayTime();*/
+displayTime();
 
 
-/* displays clock counting to 99 (for all 3 values?), increments to minutes every 60 seconds (60,20,80,40,00)*/
 
-/*var startButton = document.getElementById('start-button');
-var hours = document.querySelector('.hours');
-var minutes = document.querySelector('.minutes');
-var seconds = document.querySelector('.seconds');
 
-var startTime;
-var currentText;
 
-function millisecondsToInterval(ms){
-  var numMsInHour = 60000 * 60;
-  var numMsInMinute = 60000;
-  var numMsInSecond = 1000;
 
-  var hourCount = Math.floor(ms / numMsInHour);
-  var minuteCount = Math.floor(ms / numMsInMinute);
-  var secondCount = Math.floor(ms / numMsInSecond);
 
-  return [hourCount, minuteCount, secondCount];
-}
-
-function displayInterval(interval){
-  hours.textContent = ("0" + interval[0]).slice(-2);
-  minutes.textContent = ("0" + interval[1]).slice(-2);
-  seconds.textContent = ("0" + interval[2]).slice(-2);
-}
-
-function logCurrentTime(){
-
-  var startTime = new Date();
-
-  var currentTime = millisecondsToInterval(startTime);
-
-  displayInterval(currentTime);
-
-}
-
-window.setInterval(logCurrentTime, 1000);*/
 
 
 }());

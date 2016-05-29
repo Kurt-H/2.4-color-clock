@@ -1,3 +1,74 @@
+/*TEST*/
 /*body{
   background-color: orange;
 }*/
+
+
+
+.hours::after,
+.minutes::after{
+  content: " :";
+}
+
+
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  text-align: center;
+  height: 100%
+}
+.inner-span1,
+.outer-span{
+  height: 100%;
+  vertical-align: middle;
+  display:inline-block;
+}
+
+.color-clock{
+  background-color: #0D1F38;
+  width: 808px;
+  height: 741px;
+  padding: 0;
+  vertical-align: middle;
+  display:inline-block;
+}
+
+.clock{
+  vertical-align: middle;
+  text-align: center;
+  display:inline-block;
+}
+
+.clock span{
+  color: white;
+}
+
+.clearfix{
+  clear: both;
+}
+
+.time-bar{
+  height: 2px;
+  width: 50px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+
+
+/*
+ * stop-watch
+ */
+ /*
+.hours::after,
+.minutes::after{
+  content: ":";
+}
+
+.start{
+  background-color: green;
+  outline: none;
+}
